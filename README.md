@@ -1,5 +1,7 @@
 # Study Repository 이용안내
 
+- kimtm60/Algorithm 저장소 fork를 먼저 해주시고 Pull requests를 받는 형식으로 진행하겠습니다. fork 버튼은 오른쪽 상단에 위치 해 있습니다.
+
 - Github Desktop 다운 경로 : https://desktop.github.com/
 
 - 자신의 아이디로 로그인 후, Algorithm 저장소 Clone
