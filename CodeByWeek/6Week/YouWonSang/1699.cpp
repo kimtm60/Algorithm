@@ -22,7 +22,7 @@ void input(){
 }
 
 void solve(int num){
-    auto& ret = memo[num];
+    	auto& ret = memo[num];
 	for(int i = 1; i < limit; ++i){
 		if((num-square[i]) >= 0){
 			ret = std::min(ret, memo[num-square[i]] + 1);
