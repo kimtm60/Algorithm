@@ -10,13 +10,18 @@ constexpr auto pow(int base, int exp) -> int {
 	return base * pow(base, exp-1);
 }
 
+constexpr void fill_sqr(int* begin, int* end, int index = 1) {
+	*begin = index * index;
+	if(++begin != end)
+		return fill_sqr(begin, end, index+1);
+}
+
 auto main(int argc, const char* argv[]) -> int {
 	
 	constexpr int max = pow(EXP, MAX_DEGREE);
 	int sq[max]; int cnt = 0;
-	for(int i = 0; i < max; ++i) { sq[i] = i*i; }
-
-
+	fill_sqr(sq, sq+max);
+	
 	/* recursive lambda function */
 	std::function<void(int,int,int)> recur =
 	[&](auto s, auto l, auto r) ->void {
@@ -34,6 +39,6 @@ auto main(int argc, const char* argv[]) -> int {
 		recur(sqrt(n)+1, 4, n);
 		std::cout << cnt << std::endl;
 	}
-	
+		
 	return 0;
 }
